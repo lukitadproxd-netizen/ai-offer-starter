@@ -1,0 +1,43 @@
+{
+  "name": "ai-offer-starter",
+  "version": "0.1.0",
+  "description": "Open source toolkit for turning AI-created deliverables into ethical, sellable, deliverable offers.",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukitadproxd-netizen/ai-offer-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lukitadproxd-netizen/ai-offer-starter/issues"
+  },
+  "homepage": "https://github.com/lukitadproxd-netizen/ai-offer-starter#readme",
+  "main": "./packages/core/dist/index.js",
+  "types": "./packages/core/dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./packages/core/dist/index.d.ts",
+      "default": "./packages/core/dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "ai",
+    "offers",
+    "productized-services",
+    "templates",
+    "typescript",
+    "ethical-ai",
+    "sales",
+    "small-business",
+    "validation",
+    "open-source"
+  ],
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

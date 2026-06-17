@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ai-offer-starter.dev/schemas/customer.schema.json",
+  "title": "CustomerProfile",
+  "type": "object",
+  "required": ["customerType", "market", "painPoints", "outreachChannels"],
+  "properties": {
+    "customerType": { "type": "string", "minLength": 3 },
+    "market": { "type": "string", "minLength": 3 },
+    "currentWorkflow": { "type": "string" },
+    "painPoints": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 3 }
+    },
+    "existingAlternatives": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "outreachChannels": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["warm-referral", "public-contact-form", "existing-relationship", "community", "inbound"]
+      }
+    }
+  },
+  "additionalProperties": false
+}
