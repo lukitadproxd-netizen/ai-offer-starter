@@ -108,6 +108,14 @@ Failed to log in to github.com account lukitadproxd-netizen
 The token in default is invalid.
 ```
 
+Token-based authentication attempt on 2026-06-17 failed:
+
+```text
+error validating token: HTTP 401: Bad credentials
+```
+
+The token value was not written to this report or committed to the repository.
+
 Repo was not published.
 
 Intended repo URL:
