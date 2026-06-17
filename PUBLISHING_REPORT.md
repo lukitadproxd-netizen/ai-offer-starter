@@ -101,6 +101,13 @@ Failed to log in to github.com account lukitadproxd-netizen
 The token in default is invalid.
 ```
 
+Third recheck on 2026-06-17 returned the same authentication failure:
+
+```text
+Failed to log in to github.com account lukitadproxd-netizen
+The token in default is invalid.
+```
+
 Repo was not published.
 
 Intended repo URL:
