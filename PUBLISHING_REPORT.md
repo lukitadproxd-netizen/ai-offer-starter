@@ -2,9 +2,21 @@
 
 ## Verdict
 
-Needs review.
+Safe.
 
-The project is safe from an ethical and validation standpoint. GitHub CLI authentication is now valid for `lukitadproxd-netizen`, but repository creation and push were not completed because the execution environment rejected the network publication command before it could run. No release tag was created because the push did not happen.
+`ai-offer-starter` is published on GitHub as a public open source repository. The local repository tracks `origin/main`, and the remote contains both `main` and tag `v0.1.0`.
+
+## Repository
+
+```text
+https://github.com/lukitadproxd-netizen/ai-offer-starter
+```
+
+Remote:
+
+```text
+origin https://github.com/lukitadproxd-netizen/ai-offer-starter.git
+```
 
 ## Placeholders Found and Corrected
 
@@ -23,7 +35,7 @@ Corrected:
 
 Final placeholder search returned no matches in source files, excluding `node_modules`, `packages/core/dist`, and `.git`.
 
-## Files Modified Before Commit
+## Files Modified
 
 - `README.md`
 - `package.json`
@@ -32,6 +44,7 @@ Final placeholder search returned no matches in source files, excluding `node_mo
 - `IMPLEMENTATION_REPORT.md`
 - `CHANGELOG.md`
 - `docs/oss-program-readiness.md`
+- `PUBLISHING_REPORT.md`
 
 ## Validations Run
 
@@ -49,7 +62,7 @@ Results:
 
 ## Git Status
 
-Local repository was initialized in:
+Local repository:
 
 ```text
 C:\Users\pagin\Documents\ai-offer-started\ai-offer-starter
@@ -61,10 +74,10 @@ Branch:
 main
 ```
 
-Remote:
+Latest local commit before this report update:
 
 ```text
-origin https://github.com/lukitadproxd-netizen/ai-offer-starter.git
+c35100aa1bbcd4ecc4df992a72b7d11ad898aaed
 ```
 
 Initial commit:
@@ -73,119 +86,49 @@ Initial commit:
 9ecba07f0b2d69c0cc25bd5afeca3efabe90e79f
 ```
 
-Commit message:
-
-```text
-Initial open source ai-offer-starter toolkit
-```
-
-Expected final status after this report is committed:
-
-```text
-clean
-```
-
 ## GitHub Publication
 
-GitHub CLI is installed:
+Remote verification:
 
 ```text
-gh version 2.92.0
+c35100aa1bbcd4ecc4df992a72b7d11ad898aaed refs/heads/main
+c35100aa1bbcd4ecc4df992a72b7d11ad898aaed refs/tags/v0.1.0
 ```
 
-GitHub CLI auth status failed:
-
-```text
-Failed to log in to github.com account lukitadproxd-netizen
-The token in default is invalid.
-```
-
-Recheck on 2026-06-17 returned the same authentication failure:
-
-```text
-Failed to log in to github.com account lukitadproxd-netizen
-The token in default is invalid.
-```
-
-Third recheck on 2026-06-17 returned the same authentication failure:
-
-```text
-Failed to log in to github.com account lukitadproxd-netizen
-The token in default is invalid.
-```
-
-Token-based authentication attempt on 2026-06-17 failed:
-
-```text
-error validating token: HTTP 401: Bad credentials
-```
-
-The token value was not written to this report or committed to the repository.
-
-Authentication was later repaired outside this repository. Final authenticated status:
-
-```text
-Logged in to github.com account lukitadproxd-netizen
-Git operations protocol: https
-Required scopes include repo and workflow
-```
-
-Publication attempt after successful authentication was blocked by the execution environment before GitHub repository creation or push could run.
-
-Repo was not published.
-
-Intended repo URL:
-
-```text
-https://github.com/lukitadproxd-netizen/ai-offer-starter
-```
+The GitHub UI may display translated folder names depending on account language settings, but the repository URL and git remote are `ai-offer-starter`.
 
 ## GitHub Actions
 
-GitHub Actions should run after the repository is pushed because `.github/workflows/ci.yml` is included in the initial commit.
+GitHub Actions should run because `.github/workflows/ci.yml` is present on `main`.
 
 ## Release Tag
 
-`v0.1.0` was not created because the push did not succeed.
+Tag created and published:
+
+```text
+v0.1.0
+```
+
+Tag target:
+
+```text
+c35100aa1bbcd4ecc4df992a72b7d11ad898aaed
+```
 
 ## Manual Steps Pending
 
-Re-authenticate GitHub CLI:
-
-```bash
-gh auth login -h github.com
-gh auth status
-```
-
-Authentication is currently expected to be valid. Create and push the repository:
-
-```bash
-gh repo create lukitadproxd-netizen/ai-offer-starter --public --source=. --remote=origin --push --description "Open-source toolkit for turning AI-assisted deliverables into ethical, sellable, and deliverable offers."
-```
-
-If the repository already exists:
-
-```bash
-git remote add origin https://github.com/lukitadproxd-netizen/ai-offer-starter.git
-git push -u origin main
-```
-
-After a successful push:
-
-```bash
-git tag v0.1.0
-git push origin v0.1.0
-```
+- Confirm the GitHub Actions run is green in the GitHub UI.
+- Optionally create a GitHub Release from tag `v0.1.0`.
+- Optionally add repository topics: `ai`, `offers`, `productized-services`, `templates`, `typescript`, `ethical-ai`, `sales`, `small-business`, `validation`.
 
 ## Risks
 
-- GitHub publication is pending until the environment allows the network publication command to run.
-- `v0.1.0` should not be created until the first push succeeds.
-- GitHub Actions cannot be confirmed until the repo exists remotely.
-- The project remains vulnerable to misuse if users copy templates and add income guarantees or spam tactics outside the project.
+- GitHub Actions status was not inspected from this environment after publication.
+- The project can still be misused outside the repository if someone copies templates and adds income guarantees or spam tactics.
+- Do not move the published `v0.1.0` tag unless there is a deliberate release correction.
 
 ## Safe / Needs Review
 
-Needs review for publication status.
+Safe.
 
-Safe for local source quality and ethical scope based on the completed validations and placeholder cleanup.
+The repository is published, placeholders are corrected, validations passed, and tag `v0.1.0` exists remotely.
